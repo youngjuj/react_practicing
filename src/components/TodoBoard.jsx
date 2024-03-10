@@ -10,6 +10,8 @@ function TodoBoard(props) {
             <h1> TO DO LIST</h1>
             {
                 //javascript 공간
+                // key는 react권장사항인데 유니크한 값이어야 함
+                // 근데 item으로 하면 같은 목록 작성시 오류남
                 props.todoList.map((item) => <TodoItem key="{item}" item={item}/>)
             }
         </div>
